@@ -27,6 +27,7 @@ function App() {
             <button
                 onClick={showFilter}
                 className='z-30 text-white top-3 p-4 text-5xl md:hidden transition absolute'
+                aria-label='Open navigation'
             >
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -35,6 +36,7 @@ function App() {
                     width='52px'
                     fill='#cdcdcd'
                     className={isFilterVisible === 'translate-y-0' ? 'hidden' : ''}
+                    aria-hidden='true'
                 >
                     <path d='M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z' />
                 </svg>
@@ -45,6 +47,7 @@ function App() {
                     width='52px'
                     fill='#cdcdcd'
                     className={isFilterVisible === '-translate-y-full' ? 'hidden' : ''}
+                    aria-hidden='true'
                 >
                     <path d='m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z' />
                 </svg>
@@ -53,11 +56,16 @@ function App() {
             <nav
                 className='w-full h-full md:h-28 bg-slate-800 flex justify-center subpixel-antialiased transition'
                 id='nav'
+                role='navigation'
             >
-                <div className='w-full max-w-7xl flex flex-row justify-center md:justify-between md:gap-8 bg-slate-800 z-20 px-4 transition'>
+                <div className='w-full max-w-7xl flex flex-row justify-center md:justify-between md:gap-8 bg-slate-800 z-20 px-4 xl:px-0 transition'>
                     <picture className='md:overflow-hidden w-[40vw] sm:w-[28vw] md:w-[170px] py-4 self-center'>
                         <a href='/'>
-                            <img src='/src/assets/logo-hc.svg' alt='' className='' />
+                            <img
+                                src='/src/assets/logo-hc.svg'
+                                alt='Hartcliffe Coderz logo'
+                                className=''
+                            />
                         </a>
                     </picture>
 
@@ -77,8 +85,8 @@ function App() {
 
                         <li>
                             <a href='https://app.youform.com/forms/k10tqwqi' target='_blank'>
-                                <button className=' group group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-amber-200 p-1 text-[3.9vw] md:text-[2.2vw] xl:text-3xl font-medium text-[#343450]'>
-                                    <span className='relative flex flex-row items-center gap-1 rounded-md hover:text-white hover:bg-[#343450] xl:px-4 xl:py-2 px-2 py-1 transition-all duration-100 ease-in group-hover:bg-opacity-1'>
+                                <button className=' group group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-amber-200 p-1 text-[3.9vw] md:text-[2.2vw] xl:text-3xl font-medium text-slate-800'>
+                                    <span className='relative flex flex-row items-center gap-1 rounded-md hover:text-white hover:bg-slate-800 xl:px-4 xl:py-2 px-2 py-1 transition-all duration-100 ease-in group-hover:bg-opacity-1'>
                                         Get&nbsp;Involved
                                     </span>
                                 </button>
@@ -129,7 +137,7 @@ function App() {
                                 believe that everyone deserves access to opportunities, regardless
                                 of their background or postcode. By offering free and accessible
                                 coding training to young people, we aim to broaden their horizons
-                                and provide positive alternatives to anti-social behavior.
+                                and provide positive alternatives to anti-social behaviour.
                             </p>
                             <p className=''>
                                 In 2023, we collaborated with Bristol City Council to deliver two
@@ -145,8 +153,8 @@ function App() {
 
                         <picture className='overflow-hidden min-w-[300px] w-90% '>
                             <img
-                                src='/src/assets/team.jpg'
-                                alt=''
+                                src='/src/assets/team.webp'
+                                alt='Team of Hartcliffe Coderz'
                                 className='fancy-border border-[25px] border-lime-200'
                             />
                         </picture>
@@ -157,8 +165,8 @@ function App() {
                     <div className='flex justify-between w-max max-w-7xl items-center xl:gap-16 gap-10 xl:flex-row flex-col-reverse'>
                         <picture className=' min-w-[300px] rounded-[20px] w-12/12 '>
                             <img
-                                src='/src/assets/summer-camp.jpg'
-                                alt=''
+                                src='/src/assets/summer-camp.webp'
+                                alt='Students in a classroom being taught how to code'
                                 className='fancy-border-2 border-[25px] border-purple-200  '
                             />
                         </picture>
@@ -219,8 +227,8 @@ function App() {
                         </div>
                         <picture className='overflow-hidden min-w-[300px]'>
                             <img
-                                src='/src/assets/coderz-grad.png'
-                                alt=''
+                                src='/src/assets/coderz-grad.webp'
+                                alt='Group of students at summer camp graduation'
                                 className='fancy-border border-[25px] border-lime-200'
                             />
                         </picture>
@@ -235,7 +243,11 @@ function App() {
                             href='#nav'
                         >
                             <picture className='overflow-hidden w-[170px] place-self-center opacity-40'>
-                                <img src='/src/assets/logo-coderz-white.svg' alt='' className='' />
+                                <img
+                                    src='/src/assets/logo-coderz-white.svg'
+                                    alt='Logo'
+                                    className=''
+                                />
                             </picture>
                         </a>
                         <p className='text-zinc-300 text-center text-sm p-2 no-underline'>
