@@ -56,6 +56,10 @@ section {
     @apply h-max flex items-center justify-center sm:py-14 py-8;
 }
 
+.social {
+    @apply h-8 transition-all ease-in-out fill-white group-hover:fill-purple-300;
+}
+
 .nunito-font {
     font-family: 'Nunito', sans-serif;
     font-optical-sizing: auto;

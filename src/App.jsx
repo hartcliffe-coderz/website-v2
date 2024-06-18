@@ -100,7 +100,7 @@ function App() {
                             </p>
                             <button
                                 id='newsButton'
-                                className='text-white hover:text-zinc-600 bg-zinc-700 hover:bg-white p-4 rounded-lg  my-8 text-xl hover:bg-gradient-to-r background-animate from-lime-200 to-amber-200 font-semibold transition-all block xl:mx-0 mx-auto'
+                                className=' text-zinc-700 border-zinc-600 border-2 hover:border-white hover:bg-white p-4 px-8 rounded-3xl my-8 text-lg hover:bg-gradient-to-r background-animate from-lime-200 to-amber-200 transition-all block xl:mx-0 mx-auto uppercase font-bold'
                             >
                                 Be the first to hear about the camp
                             </button>

@@ -70,7 +70,7 @@ function Nav() {
                     </picture>
 
                     <ul
-                        className={`flex-row justify-between  py-3 sm:py-4 font-medium text-zinc-100 sm:gap-8 xl:gap-16 items-center xl:text-3xl sm:text-[3.9vw] md:text-[2.7vw] lg:text-[2.2vw] transition-all ease-in-out hidden md:flex`}
+                        className={`flex-row justify-between align-middle py-3 sm:py-4 font-medium text-zinc-100 sm:gap-8 xl:gap-16 items-center xl:text-3xl sm:text-[3.9vw] md:text-[2.7vw] lg:text-[2.2vw] transition-all ease-in-out hidden md:flex`}
                     >
                         <li>
                             <a href='#coding-club' className=' hover:text-lime-200'>
@@ -83,10 +83,10 @@ function Nav() {
                             </a>
                         </li>
 
-                        <li>
+                        <li className='flex items-center'>
                             <a href='https://app.youform.com/forms/k10tqwqi' target='_blank'>
-                                <button className=' group group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-amber-200 p-1 text-[3.9vw] md:text-[2.2vw] xl:text-3xl font-medium text-slate-800'>
-                                    <span className='relative flex flex-row items-center gap-1 rounded-md hover:text-white hover:bg-slate-800 xl:px-4 xl:py-2 px-2 py-1 transition-all duration-100 ease-in group-hover:bg-opacity-1'>
+                                <button className='uppercase group relative inline-flex items-center justify-center overflow-hidden rounded-3xl bg-amber-200 p-1 text-[3.9vw] md:text-[2.2vw] lg:text-xl text-slate-800 font-semibold'>
+                                    <span className='relative flex flex-row items-center gap-1 rounded-3xl hover:text-white hover:bg-slate-800 xl:px-6 xl:py-2 px-4 py-2 transition-all duration-100 ease-in group-hover:bg-opacity-1'>
                                         Get&nbsp;Involved
                                     </span>
                                 </button>
