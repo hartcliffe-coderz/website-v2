@@ -7,7 +7,7 @@
 }
 
 * {
-    @apply overscroll-none;
+    @apply overscroll-none text-slate-600;
 }
 
 *::selection {
@@ -39,7 +39,7 @@ h6 {
 }
 
 p {
-    @apply py-3 sm:py-4 text-slate-600 antialiased text-xl sm:text-2xl xl:text-xl font-light leading-snug;
+    @apply py-3 sm:py-4 antialiased text-xl sm:text-2xl xl:text-xl font-light leading-snug;
 }
 
 a {
@@ -56,8 +56,22 @@ section {
     @apply h-max flex items-center justify-center sm:py-14 py-8;
 }
 
+footer h3,
+footer ul li {
+    @apply text-zinc-200;
+}
+
+.policy,
+.policy > ul li {
+    @apply text-slate-600 text-xl font-light;
+}
+
 .social {
-    @apply h-8 transition-all ease-in-out fill-white group-hover:fill-purple-300;
+    @apply h-8 transition-all ease-in-out fill-white opacity-70 group-hover:fill-lime-200 hover:opacity-100;
+}
+
+.partner-logo {
+    @apply h-[50px] xl:h-[50px] lg:h-[40px] max-[505px]:h-[60px];
 }
 
 .nunito-font {

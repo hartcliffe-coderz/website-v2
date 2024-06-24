@@ -1,30 +1,36 @@
-import React from 'react';
 function Footer() {
     return (
         <div>
-            <div className='bg-gradient-to-r from-purple-300/90 via-amber-100  to-lime-200 to-60% flex justify-center xl:px-0 px-4 sm:px-8 h-2 overflow-hidden'></div>
-            <footer className='w-full h-36 '>
-                <div className='w-full bg-[#272829] xl:px-0 px-8'>
+            <div className='bg-gradient-to-r from-purple-300/90 via-amber-100  to-lime-200 to-60% flex justify-center xl:px-0 px-4 sm:px-8 h-4 overflow-hidden'></div>
+            <footer className='w-full h-36'>
+                <div className='w-full bg-slate-800 xl:px-0 px-8 pb-8'>
                     <div className='max-w-7xl mx-auto py-4'>
-                        <div className='grid grid-cols-2 lg:grid-cols-5 pt-10'>
-                            <ul className='text-zinc-200 leading-8 col-span-2 xl:col-span-1 py-4'>
+                        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 pt-10 gap-y-2 lg:gap-y-0 gap-x-10'>
+                            <ul className='text-zinc-200 leading-8 col-span-1 sm:col-span-2 md:col-span-1 py-4'>
                                 <li>
                                     <a
-                                        className='group flex flex-row items-center text-3xl font-semibold rounded-lg pb-4'
+                                        className='group flex flex-row items-center text-3xl font-semibold rounded-lg pb-8'
                                         href='#nav'
                                     >
                                         <picture className='overflow-hidden w-[170px]'>
-                                            <img src='/src/assets/logo-hc.svg' alt='Logo' />
+                                            <img
+                                                src='/src/assets/logo-hc.svg'
+                                                alt='Logo'
+                                                className='grayscale opacity-80'
+                                            />
                                         </picture>
                                     </a>
                                 </li>
                                 <li className=''>
-                                    <h3 className='uppercase text-xl font-bold'>Contact Us</h3>
+                                    <h3 className='uppercase text-xl font-bold'>Contact</h3>
                                 </li>
                                 <li className='underline-none'>
-                                    <a href='mailto:coderz@hartcliffe.org'>coderz@hartcliffe.org</a>
+                                    <a href='/contact' className='text-lime-100'>
+                                        {' '}
+                                        Send us an email
+                                    </a>
                                 </li>
-                                <li className='flex gap-8 py-8'>
+                                <li className='flex gap-6 pt-2'>
                                     <div className='group'>
                                         <a
                                             href='https://www.instagram.com/hartcliffe_coderz/'
@@ -89,86 +95,121 @@ function Footer() {
                                                 viewBox='0 0 23 23'
                                                 width='40'
                                                 xmlns='http://www.w3.org/2000/svg'
-                                                className='social'
+                                                className='social -translate-x-2'
                                             >
                                                 <path
-                                                    clip-rule='evenodd'
+                                                    // clip-rule='evenodd'
                                                     d='M2.5 3.5C1.94772 3.5 1.5 3.94772 1.5 4.5V7.5C1.5 9.98528 3.51472 12 6 12H6.5V19.5C6.5 20.0523 6.94772 20.5 7.5 20.5H11.5C12.0523 20.5 12.5 20.0523 12.5 19.5V11.5C12.5 10.3954 13.3954 9.5 14.5 9.5C15.6046 9.5 16.5 10.3954 16.5 11.5V19.5C16.5 20.0523 16.9477 20.5 17.5 20.5H21.5C22.0523 20.5 22.5 20.0523 22.5 19.5V11.5C22.5 7.08172 18.9183 3.5 14.5 3.5C11.7541 3.5 9.33238 4.88389 7.89271 6.98846C7.66813 6.93935 7.5 6.73931 7.5 6.5V4.5C7.5 3.94772 7.05228 3.5 6.5 3.5H2.5Z'
-                                                    fill-rule='evenodd'
+                                                    // fill-rule='evenodd'
                                                 />
                                             </svg>
                                         </a>
                                     </div>
                                 </li>
                             </ul>
-
                             <ul className='text-zinc-200 leading-8 py-4'>
-                                <li>Safeguarding</li>
-
-                                <li>Accessibility</li>
-
-                                <li>Diversity Statement</li>
-
-                                <li>Curriculum</li>
+                                <h3 className='uppercase text-xl font-bold pb-3'>About us</h3>
+                                <li>Mission</li>
+                                <li>Team</li>
+                                <li>What we teach</li>
                                 <li>Our Venues</li>
+                                <li>Safeguarding</li>
+                                <li>Diversity Statement</li>
                             </ul>
-                            <ul className='text-zinc-200 leading-8 py-4'>
-                                <li>Get Involved</li>
 
-                                <li>Social Media</li>
-
-                                <li>Vision/Mission/Tenets</li>
-
-                                <li>Newsletter</li>
-
+                            <ul className='text-zinc-200 leading-8 py-4 cursor-pointer'>
+                                <h3 className='uppercase text-xl font-bold pb-3'>Get Involved</h3>
+                                <li>Support us</li>
+                                <li>Volunteer</li>
+                                <li>Free Websites</li>
                                 <li>Policies</li>
+                                <li>Report an issue</li>
+                                <li>Hire us</li>
                             </ul>
-                            <div className='col-span-2 py-4'>
+
+                            <div className='col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-2 py-4'>
                                 <h3 className='text-zinc-200 uppercase text-xl font-bold'>
-                                    Subscribe to our newsletter
+                                    Email updates
                                 </h3>
                                 <p className='text-zinc-200 text-sm'>
-                                    Hello pepole pls subscripbe you like it! tnx very muhc sent form
-                                    ipohne
+                                    Don&apos;t miss out on our future events. We promise to keep
+                                    your details safe and only send you relevant info.
                                 </p>
                                 <button
                                     id='footer-subscribe'
-                                    className='uppercase group group relative inline-flex items-center justify-center overflow-hidden rounded-3xl bg-amber-200 p-1 text-[2vw] md:text-[2.2vw] lg:text-xl font-medium text-slate-800'
+                                    className='uppercase group group relative inline-flex items-center justify-center overflow-hidden rounded-3xl bg-amber-200 p-1 text-lg font-medium text-slate-800'
                                 >
-                                    <span className='relative flex flex-row items-center gap-1 rounded-3xl hover:text-white hover:bg-[#272829] xl:px-8 xl:py-1 px-6 py-1 transition-all duration-100 ease-in group-hover:bg-opacity-1'>
+                                    <span className='relative flex flex-row items-center gap-1 rounded-3xl hover:text-white hover:bg-slate-800 xl:px-8 xl:py-1 px-6 py-1 transition-all duration-100 ease-in group-hover:bg-opacity-1'>
                                         Sign&nbsp;Up
                                     </span>
                                 </button>
-                                <div className='flex gap-10 opacity-70 py-8'>
-                                    <img
-                                        src='src/assets/partnerLogos/bcc.png'
-                                        alt='Bristol City Council logo'
-                                        className='h-[50px]'
-                                    ></img>
-                                    <img
-                                        src='src/assets/partnerLogos/onecity.png'
-                                        className='h-[50px]'
-                                        alt='One City logo'
-                                    ></img>
-                                    <img
-                                        src='src/assets/partnerLogos/quartet.png'
-                                        alt='Quartet Community Foundation logo'
-                                        className='h-[50px]'
-                                    ></img>
-                                    <img
-                                        src='src/assets/partnerLogos/hwcp.png'
-                                        alt='HWCP logo'
-                                        className='h-[50px]'
-                                    ></img>
+                                <div className='flex justify-between opacity-70 pt-8 gap-6 min-[505px]:flex-row flex-col'>
+                                    <div>
+                                        {' '}
+                                        <img
+                                            src='src/assets/partnerLogos/bcc.png'
+                                            alt='Bristol City Council logo'
+                                            className='partner-logo'
+                                        ></img>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src='src/assets/partnerLogos/onecity.png'
+                                            className='partner-logo'
+                                            alt='One City logo'
+                                        ></img>
+                                    </div>
+
+                                    <div>
+                                        {' '}
+                                        <img
+                                            src='src/assets/partnerLogos/quartet.png'
+                                            alt='Quartet Community Foundation logo'
+                                            className='partner-logo'
+                                        ></img>
+                                    </div>
+
+                                    <div>
+                                        {' '}
+                                        <img
+                                            src='src/assets/partnerLogos/hwcp.png'
+                                            alt='HWCP logo'
+                                            className='partner-logo'
+                                        ></img>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='w-full bg-zinc-900 xl:px-0 px-8'>
-                    <div className='max-w-7xl mx-auto py-2'>
-                        <p className='text-zinc-300 text-sm no-underline'>
-                            © 2024 Hartcliffe Coderz. Registered Company Number: 15528419
+                <div className='w-full bg-slate-900 xl:px-0 px-8 flex flex-row space-between gap-96'>
+                    <div className='max-w-7xl mx-auto'>
+                        <p className='text-zinc-300 text-sm no-underline text-center'>
+                            &copy; 2023-{new Date().getFullYear()} Hartcliffe Coderz CIC. Registered
+                            company limited by guarantee in England & Wales (15528419) <br />
+                            <a href='/privacy' target='_blank' className='font-light'>
+                                Privacy & Cookies
+                            </a>{' '}
+                            •{' '}
+                            <a href='/terms' target='_blank' className='font-light'>
+                                Terms & Conditions
+                            </a>{' '}
+                            • Site by{' '}
+                            <a
+                                href='https://www.linkedin.com/in/zak-koev-057326264/'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                Zak
+                            </a>{' '}
+                            &{' '}
+                            <a
+                                href='https://www.linkedin.com/in/vladi-stanchev/'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                Vladi
+                            </a>
                         </p>
                     </div>
                 </div>
