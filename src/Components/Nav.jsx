@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { useState, useEffect } from 'react';
 
 function Nav() {
@@ -105,20 +105,25 @@ function Nav() {
                     onClick={showNav}
                 >
                     <li>
-                        <a href='#coding-club' className=' hover:text-lime-200 no-underline'>
+                        <a
+                            href='#coding-club'
+                            className=' hover:text-lime-200 no-underline text-zinc-100 '
+                        >
                             Coding Club
                         </a>
                     </li>
                     <li>
-                        <a href='#summer-camps' className=' hover:text-lime-200 no-underline'>
+                        <a
+                            href='#summer-camps'
+                            className=' hover:text-lime-200 no-underline text-zinc-100 '
+                        >
                             Summer Camp
                         </a>
                     </li>
-
-                    <li>
+                    <li className='flex items-center'>
                         <a href='https://app.youform.com/forms/k10tqwqi' target='_blank'>
-                            <button className=' group group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-amber-200 p-1 text-[7vw] font-medium text-[#343450]'>
-                                <span className='relative flex flex-row items-center gap-1 rounded-md hover:text-white hover:bg-[#343450]  px-14 transition-all duration-100 ease-in group-hover:bg-opacity-1'>
+                            <button className='uppercase group relative inline-flex items-center justify-center overflow-hidden rounded-3xl bg-amber-200 p-1 text-4xl text-slate-800 font-semibold'>
+                                <span className='relative flex flex-row items-center gap-1 rounded-3xl hover:text-white hover:bg-slate-800 px-[10vw] py-4 transition-all duration-100 ease-in group-hover:bg-opacity-1'>
                                     Get&nbsp;Involved
                                 </span>
                             </button>
