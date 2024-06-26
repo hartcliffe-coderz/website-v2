@@ -36,11 +36,11 @@ const CodingClubSession = () => {
 
         // Calculate the next Thursday based on today's date
         let nextThursday = new Date(today);
-        if (today.getDay() === 4 && today.getHours() < 15) {
+        if (today.getDay() === 4 && today.getHours() < 17) {
             nextThursday = today;
         } else {
             // If today is past this week's Thursday session, find the next Thursday
-            if (today.getDay() > 4 || (today.getDay() === 4 && today.getHours() >= 15)) {
+            if (today.getDay() > 4 || (today.getDay() === 4 && today.getHours() >= 17)) {
                 nextThursday.setDate(today.getDate() + (7 - today.getDay()) + 4);
             } else {
                 nextThursday.setDate(today.getDate() + (4 - today.getDay()));
@@ -69,9 +69,17 @@ const CodingClubSession = () => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const nextSessionDateString = nextThursday.toLocaleDateString(undefined, options);
 
+        // Check if next Thursday is today
+        const isToday =
+            nextThursday.getDate() === today.getDate() &&
+            nextThursday.getMonth() === today.getMonth() &&
+            nextThursday.getFullYear() === today.getFullYear();
+
         // Set the session details
         setSessionDetails(
-            `Next Coding Club ➜ ${nextSessionDateString}, ${time} at <a href="${mapLink}" target="_blank">${venue}</a>` +
+            `<span class="font-semibold">Next Coding Club</span> ➜ <span class="font-semibold">${
+                isToday ? 'TODAY' : nextSessionDateString
+            }, ${time} at <a href="${mapLink}" target="_blank" class="font-semibold">${venue}</a></span>` +
                 `${
                     calendarLink
                         ? ' <a href="' +
