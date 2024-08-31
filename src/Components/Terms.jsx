@@ -1,8 +1,8 @@
 function Terms() {
     return (
-        <div className='policy max-w-5xl mx-auto py-16'>
-            <h1>Terms and Conditions</h1>
-            <p>Last updated: June 20, 2024</p>
+        <div className='policy mx-auto'>
+            <h1 className='text-center'>Terms & Conditions</h1>
+            <p className='text-center'>Last updated: June 20, 2024</p>
             <p>Please read these terms and conditions carefully before using Our Service.</p>
             <h2>Interpretation and Definitions</h2>
             <h3>Interpretation</h3>

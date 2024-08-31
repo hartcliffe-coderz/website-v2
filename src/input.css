@@ -19,23 +19,23 @@ h1 {
 }
 
 h2 {
-    @apply text-4xl;
+    @apply text-4xl nunito-font font-bold;
 }
 
 h3 {
-    @apply text-3xl;
+    @apply text-3xl nunito-font font-medium;
 }
 
 h4 {
-    @apply text-2xl;
+    @apply text-2xl nunito-font font-medium;
 }
 
 h5 {
-    @apply text-xl;
+    @apply text-xl nunito-font font-medium;
 }
 
 h6 {
-    @apply text-lg;
+    @apply text-lg nunito-font font-medium;
 }
 
 p {
@@ -56,18 +56,44 @@ section {
     @apply h-max flex items-center justify-center sm:py-14 py-8;
 }
 
-footer h3,
+footer h3 {
+    @apply text-zinc-50;
+}
+
 footer ul li {
     @apply text-zinc-200;
 }
 
-.policy,
-.policy > ul li {
-    @apply text-slate-600 text-xl font-light;
+footer a {
+    @apply no-underline font-normal hover:underline hover:text-lime-100 transition-all duration-200 ease-out;
+}
+
+footer ul {
+    @apply flex flex-col justify-between gap-2;
+}
+
+.policy {
+    @apply max-w-3xl px-4  pt-16 pb-10;
+}
+
+.policy > ul li p {
+    @apply text-slate-600 text-lg font-light py-2;
+}
+
+.policy > p {
+    @apply py-3 text-lg font-light;
+}
+
+.policy > h2,
+.policy > h3,
+.policy > h4,
+.policy > h5,
+.policy > h6 {
+    @apply pt-10 pb-2;
 }
 
 .social {
-    @apply h-8 transition-all ease-in-out fill-white opacity-70 group-hover:fill-lime-200 hover:opacity-100;
+    @apply h-8 fill-white opacity-60 group-hover:fill-lime-200 hover:opacity-100 transition-all duration-200 ease-out;
 }
 
 .partner-logo {
@@ -99,6 +125,12 @@ footer ul li {
 .background-animate {
     -webkit-animation: animateBackground 0.5s ease infinite;
     animation: animateBackground 0.5s ease infinite;
+    background-size: 200%;
+}
+
+.background-animate-slow {
+    -webkit-animation: animateBackground 1s ease infinite;
+    animation: animateBackground 1s ease infinite;
     background-size: 200%;
 }
 

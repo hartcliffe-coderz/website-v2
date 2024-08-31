@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Contact() {
     const [result, setResult] = React.useState('');
+    const [showForm, setShowForm] = useState(true);
 
     const onSubmit = async (event) => {
         event.preventDefault();
         setResult('Sending....');
         const formData = new FormData(event.target);
 
-        formData.append('access_key', '9517e0aa-1daa-4ae4-8763-e2ad82e06321');
+        formData.append('access_key', '904c8c60-b378-4ea9-9c4c-17d3d231dd6e');
 
         const response = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -19,6 +20,7 @@ export default function Contact() {
 
         if (data.success) {
             setResult('Email Sent');
+            setShowForm(false);
             event.target.reset();
         } else {
             console.log('Error', data);
@@ -26,12 +28,9 @@ export default function Contact() {
         }
     };
 
-    return (
+    return showForm ? (
         <div className='py-16 px-6 max-w-xl mx-auto'>
             <h1 className='text-center'>Contact us</h1>
-            <p className='text-center text-md pb-12 '>
-                Send us an email and we&apos;ll be in touch as soon as we can.
-            </p>
             <form onSubmit={onSubmit} className='' aria-labelledby='contactFormHeading'>
                 <fieldset className='flex flex-col gap-6'>
                     <legend id='contactFormHeading' className='sr-only'>
@@ -66,7 +65,6 @@ export default function Contact() {
                             aria-required='true'
                         />
                     </div>
-
                     <div>
                         <label htmlFor='subject'>What are you contacting us about?</label>
                         <br />
@@ -79,10 +77,8 @@ export default function Contact() {
                         >
                             <option value=''>- Select -</option>
                             <option value='Website Form: Coding Club'>Coding Club</option>
-                            <option value='Website Form: Code4Community'>Code4Community</option>
-                            <option value='Website Form: Feedback'>Feedback</option>
                             <option value='Website Form: Support us'>Support us</option>
-                            <option value='Website Form: Volunteer'>Volunteer</option>
+                            <option value='Website Form: Feedback'>Feedback/Complaint</option>
                             <option value='Website Form: Something else'>Something else</option>
                         </select>
                     </div>
@@ -101,20 +97,28 @@ export default function Contact() {
                             aria-required='true'
                         ></textarea>
                     </div>
-                    <button
-                        type='submit'
-                        className='border-[1px] border-zinc-600 px-20 py-4 rounded-full uppercase font-semibold hover:bg-gradient-to-r background-animate from-lime-200 to-amber-200 transition-all hover:border-white  text-slate-600  ring-lime-500/30 focus:bg-white focus:outline-none focus:ring-4 max-w-72 mx-auto'
-                    >
-                        Submit Form
-                    </button>
+                    {/* Honey */}
+                    <input type='checkbox' name='botcheck' className='hidden'></input>
+                    <div className='mx-auto flex flex-row gap-4'>
+                        <div className='h-captcha' data-captcha='true'></div>
+
+                        <button
+                            type='submit'
+                            className='border-[1px] border-zinc-600 px-20 py-4 rounded-full uppercase font-semibold hover:bg-gradient-to-r background-animate-slow from-lime-200 to-amber-200 transition-all hover:border-white  text-slate-600  ring-lime-500/30 focus:bg-white focus:outline-none focus:ring-4 max-w-72 mx-auto'
+                        >
+                            Submit Form
+                        </button>
+                    </div>
                 </fieldset>
-                <div className='h-captcha' data-captcha='true'></div>
             </form>
             <span role='status' aria-live='polite'>
                 {result}
             </span>
-            {/* hCaptcha */}
-            <script src='https://web3forms.com/client/script.js' async defer></script>
+        </div>
+    ) : (
+        <div className='flex justify-around flex-col'>
+            <h1 className='text-center mt-48'>We&apos;re on it!</h1>
+            <p className=' mb-48 text-center'>Thanks! Your email was sent successfully.</p>
         </div>
     );
 }

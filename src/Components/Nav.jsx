@@ -73,20 +73,32 @@ function Nav() {
                         className={`flex-row justify-between align-middle py-3 sm:py-4 font-medium text-zinc-100 sm:gap-8 xl:gap-16 items-center xl:text-3xl sm:text-[3.9vw] md:text-[2.7vw] lg:text-[2.2vw] transition-all ease-in-out hidden md:flex`}
                     >
                         <li>
-                            <a href='#coding-club' className=' hover:text-lime-200'>
+                            <a
+                                href='/#coding-club'
+                                className='hover:bg-gradient-to-r from-purple-200 to-amber-200 hover:text-transparent bg-clip-text cursor-pointer'
+                            >
                                 Coding Club
                             </a>
                         </li>
                         <li>
-                            <a href='#summer-camps' className=' hover:text-lime-200'>
+                            <a
+                                href='#summer-camps'
+                                className='hover:bg-gradient-to-r from-amber-200 to-lime-200 hover:text-transparent bg-clip-text cursor-pointer'
+                            >
                                 Summer Camp
                             </a>
                         </li>
 
                         <li className='flex items-center'>
                             <a href='https://app.youform.com/forms/k10tqwqi' target='_blank'>
-                                <button className='uppercase group relative inline-flex items-center justify-center overflow-hidden rounded-3xl bg-amber-200 p-1 text-[3.9vw] md:text-[2.2vw] lg:text-xl text-slate-800 font-semibold'>
-                                    <span className='relative flex flex-row items-center gap-1 rounded-3xl hover:text-white hover:bg-slate-800 xl:px-6 xl:py-2 px-4 py-2 transition-all duration-100 ease-in group-hover:bg-opacity-1'>
+                                <button
+                                    className='uppercase group relative inline-flex items-center justify-center overflow-hidden rounded-3xl bg-amber-200 p-1 text-[3.9vw] md:text-[2.2vw] lg:text-xl text-slate-900 font-semibold
+                                
+                                hover:bg-gradient-to-r background-animate-slow from-purple-200 to-amber-200 hover:border-transparent bg-clip-border cursor-pointer 
+                                
+                                '
+                                >
+                                    <span className='relative flex flex-row items-center gap-1 rounded-3xl hover:text-white hover:bg-slate-800 xl:px-6 xl:py-2 px-4 py-2 transition-all duration-100 ease-in group-hover:bg-opacity-1 cursor-pointer '>
                                         Get&nbsp;Involved
                                     </span>
                                 </button>

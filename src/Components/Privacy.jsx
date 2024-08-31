@@ -1,8 +1,8 @@
 function Privacy() {
     return (
-        <div className='policy max-w-5xl mx-auto py-16'>
-            <h1>Privacy Policy</h1>
-            <p>Last updated: June 20, 2024</p>
+        <div className='policy max-w-3xl mx-auto'>
+            <h1 className='text-center'>Privacy Policy</h1>
+            <p className='text-center'>Last updated: June 20, 2024</p>
             <p>
                 This Privacy Policy describes Our policies and procedures on the collection, use and
                 disclosure of Your information when You use the Service and tells You about Your
