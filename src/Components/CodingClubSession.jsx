@@ -59,11 +59,11 @@ const CodingClubSession = () => {
 
         // Determine the venue and time for the next session
         const isSymes = nextSessionWeeksSinceStart % 2 !== 0;
-        const venue = isSymes ? '@symes' : 'The Gatehouse';
-        const time = isSymes ? '3:30pm' : '3:00pm';
+        const venue = isSymes ? '@symes' : '@symes';
+        const time = isSymes ? '3:30pm' : '3:30pm';
         const mapLink = isSymes
             ? 'https://maps.app.goo.gl/kYAkbh7gZ6HcXVMNA'
-            : 'https://maps.app.goo.gl/xxBs8EK1LWijBrDU9';
+            : 'https://maps.app.goo.gl/kYAkbh7gZ6HcXVMNA';
 
         // Format the date to a readable string
         const options = { year: 'numeric', month: 'long', day: 'numeric' };

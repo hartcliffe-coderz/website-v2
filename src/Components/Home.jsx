@@ -55,23 +55,23 @@ function Home() {
                         <p className=''>
                             Our Coding Club is a weekly free drop-in event for young people aged
                             10-16, designed to foster a casual and engaging environment for learning
-                            coding skills. This club alternates between two key community hubs:
-                            <br />
+                            coding skills. This club takes place in the heart of of the community:{' '}
+                            {/* <br /> */}
                             <a
                                 href='https://maps.app.goo.gl/kYAkbh7gZ6HcXVMNA'
                                 target='_blank'
                                 className='font-medium bg-lime-200 no-underline hover:bg-slate-600 hover:text-lime-100 transition rounded-full px-2'
                             >
                                 @symes Resource Centre
-                            </a>{' '}
-                            and{' '}
+                            </a>
+                            {/* and{' '}
                             <a
                                 href='https://maps.app.goo.gl/xxBs8EK1LWijBrDU9'
                                 target='_blank'
                                 className='font-medium bg-lime-200 no-underline hover:bg-slate-600 hover:text-lime-100 transition rounded-full px-2'
                             >
                                 The Gatehouse
-                            </a>
+                            </a> */}
                             , providing flexible and accessible opportunities to explore technology.
                         </p>
                         <p className=''>
