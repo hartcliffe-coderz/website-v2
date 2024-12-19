@@ -9,6 +9,30 @@ const CodingClubSession = () => {
         const totalSessions = 50;
         const today = new Date();
 
+        // Temporary static message for Christmas break
+
+        const holidayStart = new Date(2024, 11, 19); // December 19, 2024
+
+        const holidayEnd = new Date(2025, 0, 9); // January 9, 2025
+
+        const staticMessageDate = new Date(2025, 0, 9); // January 9, 2025
+
+        if (today >= holidayStart && today < holidayEnd) {
+            const staticDateString = staticMessageDate.toLocaleDateString(undefined, {
+                year: 'numeric',
+
+                month: 'long',
+
+                day: 'numeric',
+            });
+
+            setSessionDetails(
+                `<span class="font-semibold">Next Coding Club</span> ➜ <span class="font-semibold">${staticDateString}, 3:30pm at <a href="https://maps.app.goo.gl/kYAkbh7gZ6HcXVMNA" target="_blank" class="font-semibold">@symes</a></span>`
+            );
+
+            return;
+        }
+
         // If today is before the start date, set next session to start date
         if (today < startDate) {
             const nextSessionDateString = startDate.toLocaleDateString(undefined, {
